@@ -1,0 +1,106 @@
+% Created 2019-03-17 Sun 20:19
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[, brazilian]{babel}
+\usepackage{float}
+\usepackage{color, colortbl}
+\usepackage{titling}
+\setlength{\droptitle}{-1.5cm}
+\hypersetup{ colorlinks = true, urlcolor = blue }
+\usemintedstyle{murphy}
+\definecolor{beige}{rgb}{0.93,0.93,0.82}
+\definecolor{brown}{rgb}{0.4,0.2,0.0}
+\author{Fernanda Guimarães - 2016058166}
+\date{}
+\title{Exercício 02 - (entrega 18/03)}
+\hypersetup{
+ pdfauthor={Fernanda Guimarães - 2016058166},
+ pdftitle={Exercício 02 - (entrega 18/03)},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.2)}, 
+ pdflang={Brazilian}}
+\begin{document}
+
+\maketitle
+
+\section{Questão 1}
+\label{sec:orgc97a2cf}
+Testes A/B são uma prática experimental para descobrir o que os usuários querem, em
+detrimento de tentar levantar requisitos avançadamente. A prática de desenvolvimento que
+permite "live experimentation" usando tais testes é o \emph{continuos deployment}: as
+inovações dos engenheiros são implantadas imediatamente para usuários reais
+experimentarem. Isso permite que engenheiros aprendam sobre a diversidade de usuários, e
+aprenciem suas diferentes visões sobre o Facebook.
+
+Para melhoras os dados obtidos de testes, o Facebook se utiliza de testes de usabilidade
+com grupos de foco de usuário em adição a testes do produto implantado em larga escala.
+
+\section{Questão 2}
+\label{sec:org45ef749}
+Um terço dos arquivos foram editados por apenas um engenheiro, e outro quarto por dois.
+Apenas 10\% dos arquivos são lidados por mais de sete engenheiros. Isso ocorre por dois
+motivos: 
+\begin{itemize}
+\item No Facebook, engenheiros conduzem qualquer tipo de testes de unidade para o seu
+código. Em adição, o código tem que passar em todos os testes acumulados de regressão,
+administrados automaticamente como parte do processo de commit e push.
+\item Desenvolvedores também têm que dar suporte ao uso operacional do seu software — uma
+combinação que ficou conhecida como “devops.” As metodologias e ferramentas não são
+suficientes por si mesmas porque elas podem ser sempre usadas
+erroneamente. Conseguintemente, uma cultura de responsabilidade pessoal é crítica.
+\end{itemize}
+
+\section{Questão 3}
+\label{sec:org8d34938}
+O desenvolvimento de software no Facebook é contrário a muitas práticas comuns da
+indústria. Os motivos são diversos, dentre eles:
+\begin{itemize}
+\item Não há um plano detalhado para atingir um produto final, bem especificado.
+\item Engenheiros trabalham diretamente com uma base de código sem branches e sem merging.
+\item Não há um time separado de QA para testes.
+\item Código novo é liberado em alto ritmo, atualmente duas vezes por dia.
+\item Engenheiros têm que escolher por si em que vão trabalhar.
+\item Não há punição por falhas.
+\end{itemize}
+
+\section{Questão 4}
+\label{sec:orgddd300a}
+\begin{itemize}
+\item Post de dúvidas: o fórum, serve, primeiramente, para a postagem de dúvidas a serem
+respondidas por usuários, com comentários e avaliação para as melhores respostas. No
+fim, o autor da pergunta escolha a resposta que mais se adequou à pergunta.
+\item Respostas: o fórum também serve para pessoas com alto conhecimento em uma ou mais
+áreas acumularem pontos com respostas e comentários. Esses pontos podem usados para
+futuras contratações, satisfação pessoal ou puramente altruísmo.
+\item Pesquisa: o fórum também serve para usuários pesquisarem por perguntas já respondidas
+previamente. Com o passar dos anos, apenas perguntas muito específicas, ou de
+ferramentas novas, serão novidade.
+\item Aprendizado de Máquina: fóruns de Q\&A podem ser usados em competições de machine
+learning para a tentativa de previsão de tags automáticas para as perguntas.
+\item Estudos de confiabilidade: muitos exemplos de código de fóruns online de Q\&A podem não
+ser confiáveis. Esse fato pode ser usado em estudos empíricos para uma análise de mal
+uso de API.
+\end{itemize}
+
+\section{Questão 5}
+\label{sec:orgcc34e0b}
+Eu tentaria convencê-lo, pois de fato o usuário não conseguiria utilizar essa
+funcionalidade sem ter aberto o arquivo primeiro.
+\end{document}

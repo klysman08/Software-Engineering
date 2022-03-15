@@ -1,0 +1,293 @@
+% Created 2019-04-02 Tue 19:56
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[, brazilian]{babel}
+\usepackage{float}
+\usepackage{color, colortbl}
+\usepackage{titling}
+\setlength{\droptitle}{-1.5cm}
+\hypersetup{ colorlinks = true, urlcolor = blue }
+\usemintedstyle{murphy}
+\definecolor{beige}{rgb}{0.93,0.93,0.82}
+\definecolor{brown}{rgb}{0.4,0.2,0.0}
+\author{Fernanda Guimarães - 2016058166}
+\date{}
+\title{Resumo prova 01}
+\hypersetup{
+ pdfauthor={Fernanda Guimarães - 2016058166},
+ pdftitle={Resumo prova 01},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.2)}, 
+ pdflang={Brazilian}}
+\begin{document}
+
+\maketitle
+DCC/UFMG - Engenharia de Software - Prof. Marco Tulio Valente (mtov@dcc.ufmg.br)
+
+Revisão para a Prova 1:
+
+\section{Qual a diferença entre requisitos funcionais e não-funcionais?}
+\label{sec:org21db323}
+\begin{itemize}
+\item Funcionais: "o que" um sistema deve fazer; quais funcionalidades ou serviços ele deve
+implementar. Exemplo: quando uma nota de uma prova for lançada, os alunos devem ser
+notificados por e-mail
+\item Não-funcionais: "como" um sistema deve operar, sob quais "constraints" e qual
+qualidade de serviço ele deve oferecer. Exemplo: o e-mail acima deve chegar em até um
+minuto.
+\end{itemize}
+\section{Descreva cinco tipos de requisitos não-funcionais.}
+\label{sec:org2fd4326}
+\begin{itemize}
+\item Desempenho: "deve dar o saldo da conta em menos de 5 segundos"
+\item Disponibilidade: "deve estar no ar 99.99\% do tempo"
+\item Capacidade: "deve ser capaz de armazenar dados de 1M de clientes"
+\item Tolerância a falhas: "deve continuar operando mesmo se São Paulo cair"
+\item Segurança: "deve criptografar todos os dados trocados com as agências"
+\end{itemize}
+
+\section{Descreva o principal benefício de um bom projeto modular:}
+\label{sec:org97abdd6}
+\begin{itemize}
+\item Paraleliza o desenvolvimento (cada "time" trabalha em um módulo)
+\item Facilita o entendimento (você pode começar a contribuir após dominar um único módulo)
+\item Facilita manutenções (que tendem a ficar "isoladas" em módulo)
+\end{itemize}
+
+\section{Todo defeito ou bug em um software causa uma falha? Sim ou Não? Justifique.}
+\label{sec:org7a30b57}
+Nem todo defeito/bug causa falhas; pois o código defeituoso pode nunca vir a ser executado/testado.
+\section{Defina refactoring. Dê três exemplos de refactoring.}
+\label{sec:org01c5098}
+Refactoring: manutenção (perfectiva) realizada exclusivamente para incrementar
+manutenibilidade; ou seja, não corrige bug, não implementa nova funcionalidade etc
+
+Exemplos clássicos:
+\begin{itemize}
+\item Rename variable/class/etc
+\item Extract function/class/interface/package
+\item Move function/class
+\end{itemize}
+\section{Defina monorepos.}
+\label{sec:orgb23b962}
+Um único repositório monolítico (isto é, um monorepo), gerenciado por um sistema de
+controle de versão proprietário
+
+\section{Essencialmente, qual a principal motivação (ou inspiração) de processos de desenvolvimento do tipo Waterfall. Isto é, por que eles foram os processos propostos inicialmente para desenvolvimento de software?}
+\label{sec:org9f4732f}
+Muito usado quando os custos de uma falha de design ou implementação podem ser enormes,
+até em termos de vidas humanao. Parte do sucesso pode ser explicada pela sua
+"padronização" pelo Departamento de Defesa Norte-Americano, em 1985.
+
+\section{Liste três fatores de qualidade externa de software. Liste três fatores de qualidade interna.}
+\label{sec:org166b467}
+Qualidade Externa: Correção, robustez, reusabilidade.
+Qualidade Interna: Modularidade, legibilidade, testabilidade.  
+
+\section{Explique e descreva a classificação de sistemas de software do tipos A, B, C.}
+\label{sec:org6e918fd}
+Sistemas C (casuais): 
+\begin{itemize}
+\item não existe pressão para níveis altos de qualidade
+\item podem ter bugs
+\item 1 ou 2 engenheiros
+\item sistemas pequenos, algo sem importância
+\item tipo mais comum
+\end{itemize}
+
+Sistemas B (business):
+\begin{itemize}
+\item sistemas críticos (geram lucro, etc)
+\item risco: não usarem técnicas de ES e se tornarem um "passivo" ao invés de um "ativo" para a empresa
+\end{itemize}
+
+Sistemas A (acute):
+\begin{itemize}
+\item sistemas onde nada pode dar errado, pois o custo é imenso, em termos de vidas humanas
+e/ou grandes montantes financeiros
+\item exemplos: sistemas de transporte, médicos, aviação, espaciais etc
+\item requerem certificações normalmente
+\end{itemize}
+
+
+\section{Qual a principal diferença entre XP e Scrum? Qual a principal diferença entre Kanban e Scrum? Qual a principal diferença entre Lean e Scrum?}
+\label{sec:org59e942b}
+Diferença XP e Scrum:
+\begin{itemize}
+\item Scrum é um método ágil para gerenciamento de projetos, mas não necessariamente de
+software
+\item Scrum não tem preocupação com práticas, pois seu objetivo é mais amplo.
+\end{itemize}
+Diferença Kanban e Scrum:
+Kanbam e Scrum:
+\begin{itemize}
+\item Scrum - sprints + "quota" de tarefas em cada estágio
+\item Também não tem scrum master, product owner, pelo menos explicitamente
+\end{itemize}
+Lean e Scrum:
+\begin{itemize}
+\item Lean é um método "ágil" para gerenciamento de startups, com ciclos curtos e feedback,
+ou seja, é mais específico que o Scrum.
+\end{itemize}
+
+\section{Descreva um valor de XP? Descreva dois princípios de XP? Descreva três práticas de desenvolvimento propostas por XP?}
+\label{sec:org5c6e362}
+Valor: feedback constante: pois em sistemas de software, dada à complexidade dos mesmos,
+  pode ser difícil ter a solução "certa", logo de início; 
+
+Princípios:
+\begin{itemize}
+\item Flow: priorizar um fluxo contínuo e produtivo de atividades.
+\item Baby Steps: uma feature de cada vez (a de maior prioridade para o cliente); uma sub-feature de cada
+\end{itemize}
+vez etc.
+
+Práticas:
+\begin{itemize}
+\item Pair programming: toda tarefa de programação (design, codificação, testes) deve ser
+feita por dois programadores, em conjunto;
+\item Iteração: planeje seu trabalho semanalmente, de forma que ao fim de toda semana
+deve-se produzir "deployable software".
+\item TDD: não só ter muitos testes, mas escrever esses testes antes da fase de codificação
+(e claro, são sempre testes automatizados).
+\end{itemize}
+
+
+
+\section{O que é uma slack no contexto de XP?}
+\label{sec:org828947e}
+Introduza nos ciclos algumas "folgas", isto é, tarefas menos importantes, que possam ser descartadas, caso o projeto fique atrasado
+\begin{itemize}
+\item Refatorações
+\item Pesquisa e prospecção de novas tecnologias
+\item Alguma documentação ou manual de uso
+\item Seminários internos etc
+\end{itemize}
+
+\section{Basicamente, quando ocorre um conflito de integração?}
+\label{sec:org97ba939}
+\begin{itemize}
+\item Ao implementar F, você alterou um arquivo X
+\item Ao mesmo tempo, outro desenvolvedor alterou as mesmas linhas de X e integrou o código dele! Antes de você integrar ….
+\item O que ocorre quando você for integrar o seu código? Um conflito
+\end{itemize}
+
+\section{Por que XP advoga integrações contínuas?}
+\label{sec:org2a830a4}
+(1) feedback rápido; (2) evitar "integration-hell" (isto é, quando a integração é mais
+custosa que o desenvolvimento)
+
+\section{Qual a diferença entre integração contínua, continuous delivery e continuous deployment?}
+\label{sec:orge1498b9}
+\begin{itemize}
+\item CI: continuous integration - prática na qual membros do time integram seus trabalhos
+frequentemente. Testes automáticos. Everyone merging code changes to a central
+repository multiple times a day.
+\item CY: continuous delivery: do CI, plus automatically prepare and track a release to
+production (anyone with sufficient privileges can do this in a few clicks).
+\item CD continuous deployment: é uma evolução de Continuous Integration (CI)- logo após
+integrado, código é também liberado para uso. Continuous deployment is like continuous
+delivery, except that releases happen automatically.
+\end{itemize}
+
+\section{Cite duas práticas propostas por XP que acabaram não sendo largamente adotadas.}
+\label{sec:org4114a37}
+Story points e pair programming.
+
+\section{Em projetos XP, não existe a figura de um arquiteto de software, já que o projeto/arquitetura não são definidos up front (isto é, eles também são incrementais). Verdadeiro ou Falso. Justifique.}
+\label{sec:orgc5109fb}
+Falso, podem existir arquitetos. A arquitetura também é definida de forma incremental; o
+sistema vai sendo particionado, à medida que evolui
+
+
+\section{Quem define o tamanho das estórias em times XP? O que é a velocidade de um time?}
+\label{sec:org8581110}
+São estimadas pelos programadores; que definem quanto tempo leva-se para implementar
+cada estória (porém, não podem ser muito complexas). 
+
+Velocidade: capacidade de trabalho de um time, em uma iteração Exemplo: a velocidade de
+um time = 26 (significa que ele é capaz de implementar 26 story points em uma iteração)
+
+
+\section{No contexto de Scrum, o que é grooming?}
+\label{sec:orgae94e98}
+Tarefas de "cuidar" do product backlog, incluindo: (1) criar e refinar estórias; (2)
+estimar estórias; (3) priorizar estórias. O time todo realiza, chefiado pelo product
+owner.
+
+\section{Qual a diferença entre sprint review e sprint retrospectiva, em Scrum.}
+\label{sec:org731c98b}
+Sprint Review:
+\begin{itemize}
+\item Reunião que marca o fim de um sprint, com participação inclusive de stakeholders
+envolvidos com o resultado do sprint
+\end{itemize}
+Retrospectiva:
+\begin{itemize}
+\item Reunião interna para refletir sobre o processo e melhorá-lo. Última atividade do
+sprint.
+\end{itemize}
+
+\section{Suponha que você está fazendo um sistema para um público externo e amplo (por exemplo, um sistema de Q\&A, como o do trabalho), usando Scrum. Como escolher o product owner neste caso?}
+\label{sec:org2280250}
+\begin{itemize}
+\item Product Owner pode ser um cliente externo (por exemplo, quando foi o cliente externo que
+contratou o desenvolvimento do sistema).
+\item Ou Product Owner pode ser alguém da área de marketing ou Vendas da organização que
+está desenvolvendo o software (isto é, alguém que vai representar os clientes reais).
+\end{itemize}
+
+\section{Por que cada atividade de um quadro Kanban possui duas colunas? Qual o significado destas duas colunas?}
+\label{sec:org4ed07fd}
+Com exceção do Backlog, demais fases possuem duas colunas:
+\begin{itemize}
+\item 1a coluna: items em andamento na fase (ex.: em implementação)
+\item 2a coluna: itens que já terminaram essa fase, mas que
+ainda não foram movidos para a fase seguinte (ex.: implementados e aguardando entrarem
+em validação; é uma espécie de buffer para a fase seguinte)
+\end{itemize}
+
+\section{Essencialmente, por que o modelo em Espiral não é classificado como um modelo de desenvolvimento ágil?}
+\label{sec:orgd7afb1a}
+Most Spiral models of development still insist on big, up-front design. The emphasis is
+on knowing as much as you can about how the system will be used; discovering all the use
+cases. Once you know these, then you design the system and break it down into phases that
+follow an iterative detail-design, implementation, test, refactor-design loop.
+\section{Quais as fases propostas pelo Método RUP?}
+\label{sec:orgcd95272}
+\begin{itemize}
+\item Inception: análise de viabilidade, orçamentos e definição de escopo
+\item Elaboração: especificação de requisitos (via casos de uso) e da arquitetura
+\item Construção: projeto de mais baixo nível, implementação e testes
+\item Transição: disponibilização do sistema para produção
+\item Essas fases podem ser divididas em iterações (ex.: construção pode ter 4 iterações); pode-se também iterar sobre as 4 fases (como em Espiral)
+\end{itemize}
+
+
+\section{Quando não usar métodos ágeis?}
+\label{sec:org98dc649}
+\begin{itemize}
+\item Requisitos estáveis
+\item Design conhecido e simples
+\item Desenvolvedores dominam a área do projeto
+\item Baixo risco
+\item Custos de mudanças é alto
+\end{itemize}
+\end{document}

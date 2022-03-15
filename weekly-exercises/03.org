@@ -1,0 +1,75 @@
+# -*- after-save-hook: org-latex-export-to-pdf; -*-
+#+options: date:nil
+#+language: bt-br
+#+latex_header: \usepackage[a4paper, margin=2cm]{geometry}
+#+latex_header: \usepackage{indentfirst}
+#+latex_header: \usepackage[]{babel}
+#+latex_header: \usepackage{float}
+#+latex_header: \usepackage{color, colortbl}
+#+latex_header: \usepackage{titling}
+#+latex_header: \setlength{\droptitle}{-1.5cm}
+#+latex_header: \hypersetup{ colorlinks = true, urlcolor = blue }
+#+latex_header: \usemintedstyle{murphy}
+#+latex_header: \definecolor{beige}{rgb}{0.93,0.93,0.82}
+#+latex_header: \definecolor{brown}{rgb}{0.4,0.2,0.0}
+
+
+#+AUTHOR: Fernanda Guimarães - 2016058166
+#+TITLE: Exercício 03 - (entrega 25/03)
+
+* Q1  
+  Atrasar a entrega é um mal hábido que é duplamente viciante e danoso. O jeito mais
+  difícil de lidar com muito o que fazer é adiar a funcionalidade. Porque é mais difícil e
+  mais importante para praticar fazendo. Às vezes pode ser melhor atrasar a data de
+  entrega. É a decisão do cliente. Isso envolve muitas questões fora do escopo do
+  planejamento do projeto. Muitas vezes você pode fazer essas difíceis escolhas apenas
+  quando as datas maiores aparecerem, e, sem prática, não pode fazer isso sob
+  pressão.
+
+* Q2
+  Existem algumas tarefas puramente técnicas com que o cliente não se importa, mas que
+  ainda precisam ser feitas. Estas incluem a instalação da atualização do banco de dados
+  do fornecedor, refatorando alguns problemas do sistema, experimentando uma ideia de
+  design para saber se será útil, e melhorando o processo de controle de configuração. É
+  importante manter cada tarefa pequena, ou seja, dividir o trabalho em tarefas de alguns
+  dias.
+
+* Q3  
+  Você precisa monitorar a iteração em intervalos regulares. Você precisa ter alguém cujo
+  trabalho é acompanhar o progresso de uma iteração. Nós chamamos essa pessoa de
+  /tracker/.
+
+* Q4
+  No final de cada iteração, toda a equipe se reunia e observava os desenvolvedores
+  demonstrarem o trabalho em que cada um tinha sido envolvido nas três semanas anteriores.
+  Isso foi em parte para que todos pudessem se manter a par dos últimos desenvolvimentos,
+  e em parte como um impulso moral - é gratificante para a equipe desenvolvedor-cliente
+  mostrar o trabalho que fizeram juntos para o resto da equipe.
+
+* Q5
+
+  A iteração é feita na data definida no início. Uma iteração de duas semanas termina em
+  duas semanas, sem mas. Histórias que são feitas, são feitas. Histórias que não são
+  feitas são adiadas para serem consideradas para implementação na próxima reunião de
+  planejamento de iteração.
+
+* Q6
+
+  Um relatório de bug é um pedido de alteração do o sistema implantado. Primeiro, 
+  determine se o bug é crítico (existem alguns bugs que não podem esperar até a próxima
+  iteração). Se não for crítico, registre-o em um cartão. Se a estimativa for mais que um
+  dia de esforço, trate o defeito como uma estória. Pouco antes da próxima reunião de
+  planejamento de iteração, o cliente deve levar os bugs pequeno desconhecidos e
+  priorizá-los.
+
+* Q7
+
+  O contrato típico de /outsourcing/ fixa três das quatro variáveis:
+  - Escopo
+  - Tempo
+  - Custo
+  
+  Infelizmente, é impossível consertar todas as quatro variáveis. Depois de ter uma
+  quantidade desconhecida de trabalho à espreita, o escopo, o tempo e o custo todos
+  explodem. Como a qualidade é a variável mais difícil de medida, as surpresas tendem a
+  ser absorvidas pela redução da qualidade.

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% set active_page = "popup" %}
+{% block content %}
+	<div>
+		<h2>{{ msg }}</h2>
+    <div class="btn-group">
+			{% for link in links %}
+			<a href="{{ link['url'] }}"><button class="btn btn-primary">{{ link['text'] }}</button></a>
+			{% endfor %}
+    </div>
+	</div>
+{% endblock %}

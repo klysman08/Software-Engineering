@@ -1,0 +1,7 @@
+Name                  Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------
+classes\database.py      14      8      0      0    43%
+classes\user.py          55     49     16      1    10%
+classes\utils.py         20     19      4      0     4%
+-------------------------------------------------------
+TOTAL                    89     76     20      1    13%

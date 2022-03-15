@@ -1,0 +1,73 @@
+# -*- after-save-hook: org-latex-export-to-pdf; -*-
+#+options: date:nil toc:nil num:nil
+#+language: bt-br
+#+latex_header: \usepackage[utf8]{inputenc}
+#+latex_header: \usepackage{enumerate}
+#+latex_header: \usepackage[a4paper, margin=2cm]{geometry}
+#+latex_header: \usepackage{indentfirst}
+#+latex_header: \usepackage[]{babel}
+#+latex_header: \usepackage{float}
+#+latex_header: \usepackage{color, colortbl}
+#+latex_header: \usepackage{titling}
+#+latex_header: \usepackage[labelformat=empty]{caption}
+#+latex_header: \setlength{\droptitle}{-1.5cm}
+#+latex_header: \hypersetup{ colorlinks = true, urlcolor = blue }
+#+latex_header: \definecolor{beige}{rgb}{0.93,0.93,0.82}
+#+latex_header: \definecolor{brown}{rgb}{0.4,0.2,0.0}
+#+latex_header: \documentclass{article} % What kind of document this is
+
+#+AUTHOR: Fernanda Guimarães - 2016058166
+#+TITLE: Exercício 9 - (entrega 13/05)
+
+* Questão1
+#+BEGIN_SRC java
+class Fibonacci {
+  private int first_number;
+  private int second_number;
+
+  public Fibonacci (int first_number, int second_number) {
+    this.first_number = first_number;
+    this.second_number = second_number;
+  }
+
+
+  public int next(){
+    int next = this.first_number + this.second_number;
+    return next;
+  }
+
+  public static void main(String[] args) {
+    int a1 = 1;
+    int a2 = 2;
+
+    Fibonacci fibonacci = new Fibonacci(a1, a2);
+    System.out.println(fibonacci.next());
+  }
+}
+
+#+END_SRC
+
+#+BEGIN_SRC java
+import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertTrue;
+
+
+@Test
+class FibonacciTest {
+  public void testNext() throws Exception {
+    Fibonacci fibonacci = new Fibonacci(0,1);
+    int result = fibonacci.next();
+    int expected = 1;
+
+    assertTrue(expected.equals(result));
+  }
+}
+#+END_SRC
+* Questão 2
+#+BEGIN_SRC java
+  @Test
+  public void testFooThrowsIndexOutOfBoundsException() {
+      assertThrows(IndexOutOfBoundsException.class, () -> foo.doStuff(),
+             "Expected foo() to throw, but it didn't");
+  }
+#+END_SRC

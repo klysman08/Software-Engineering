@@ -1,0 +1,26 @@
+# -*- after-save-hook: org-latex-export-to-pdf; -*-
+#+options: date:nil
+#+language: bt-br
+#+latex_header: \usepackage[a4paper, margin=2cm]{geometry}
+#+latex_header: \usepackage{indentfirst}
+#+latex_header: \usepackage[]{babel}
+#+latex_header: \usepackage{float}
+#+latex_header: \usepackage{color, colortbl}
+#+latex_header: \usepackage{titling}
+#+latex_header: \setlength{\droptitle}{-1.5cm}
+#+latex_header: \hypersetup{ colorlinks = true, urlcolor = blue }
+#+latex_header: \usemintedstyle{murphy}
+#+latex_header: \definecolor{beige}{rgb}{0.93,0.93,0.82}
+#+latex_header: \definecolor{brown}{rgb}{0.4,0.2,0.0}
+
+
+#+AUTHOR: Fernanda Guimarães - 2016058166
+#+TITLE: Exercício 06 - (entrega 15/04)
+
+* Q1
+   #+caption: Diagrama de Sequência
+   #+ATTR_LATEX: :height 200px :placement [H]
+   [[./sequence.png]]
+
+* Q2 & Q3
+  https://github.com/haneybarg-es/DesignPatterns

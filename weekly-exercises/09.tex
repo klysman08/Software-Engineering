@@ -1,0 +1,99 @@
+% Created 2019-05-13 Mon 14:44
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[, brazilian]{babel}
+\usepackage{float}
+\usepackage{color, colortbl}
+\usepackage{titling}
+\usepackage[labelformat=empty]{caption}
+\setlength{\droptitle}{-1.5cm}
+\hypersetup{ colorlinks = true, urlcolor = blue }
+\definecolor{beige}{rgb}{0.93,0.93,0.82}
+\definecolor{brown}{rgb}{0.4,0.2,0.0}
+\documentclass{article} % What kind of document this is
+\author{Fernanda Guimarães - 2016058166}
+\date{}
+\title{Exercício 9 - (entrega 13/05)}
+\hypersetup{
+ pdfauthor={Fernanda Guimarães - 2016058166},
+ pdftitle={Exercício 9 - (entrega 13/05)},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.2 (Org mode 9.2)},
+ pdflang={Brazilian}}
+\begin{document}
+
+\maketitle
+
+\section*{Questão1}
+\label{sec:org989dc8e}
+\begin{verbatim}
+class Fibonacci {
+  private int first_number;
+  private int second_number;
+
+  public Fibonacci (int first_number, int second_number) {
+    this.first_number = first_number;
+    this.second_number = second_number;
+  }
+
+
+  public int next(){
+    int next = this.first_number + this.second_number;
+    return next;
+  }
+
+  public static void main(String[] args) {
+    int a1 = 1;
+    int a2 = 2;
+
+    Fibonacci fibonacci = new Fibonacci(a1, a2);
+    System.out.println(fibonacci.next());
+  }
+}
+
+\end{verbatim}
+
+\begin{verbatim}
+import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertTrue;
+
+
+@Test
+class FibonacciTest {
+  public void testNext() throws Exception {
+    Fibonacci fibonacci = new Fibonacci(0,1);
+    int result = fibonacci.next();
+    int expected = 1;
+
+    assertTrue(expected.equals(result));
+  }
+}
+\end{verbatim}
+\section*{Questão 2}
+\label{sec:org410dcd3}
+\begin{verbatim}
+@Test
+public void testFooThrowsIndexOutOfBoundsException() {
+    assertThrows(IndexOutOfBoundsException.class, () -> foo.doStuff(),
+           "Expected foo() to throw, but it didn't");
+}
+\end{verbatim}
+\end{document}

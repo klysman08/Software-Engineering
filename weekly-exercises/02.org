@@ -1,0 +1,71 @@
+# -*- after-save-hook: org-latex-export-to-pdf; -*-
+#+options: date:nil
+#+language: bt-br
+#+latex_header: \usepackage[a4paper, margin=2cm]{geometry}
+#+latex_header: \usepackage{indentfirst}
+#+latex_header: \usepackage[]{babel}
+#+latex_header: \usepackage{float}
+#+latex_header: \usepackage{color, colortbl}
+#+latex_header: \usepackage{titling}
+#+latex_header: \setlength{\droptitle}{-1.5cm}
+#+latex_header: \hypersetup{ colorlinks = true, urlcolor = blue }
+#+latex_header: \usemintedstyle{murphy}
+#+latex_header: \definecolor{beige}{rgb}{0.93,0.93,0.82}
+#+latex_header: \definecolor{brown}{rgb}{0.4,0.2,0.0}
+
+
+#+AUTHOR: Fernanda Guimarães - 2016058166
+#+TITLE: Exercício 02 - (entrega 18/03)
+
+* Questão 1
+  Testes A/B são uma prática experimental para descobrir o que os usuários querem, em
+  detrimento de tentar levantar requisitos avançadamente. A prática de desenvolvimento que
+  permite "live experimentation" usando tais testes é o /continuos deployment/: as
+  inovações dos engenheiros são implantadas imediatamente para usuários reais
+  experimentarem. Isso permite que engenheiros aprendam sobre a diversidade de usuários, e
+  aprenciem suas diferentes visões sobre o Facebook.
+
+  Para melhoras os dados obtidos de testes, o Facebook se utiliza de testes de usabilidade
+  com grupos de foco de usuário em adição a testes do produto implantado em larga escala.
+
+* Questão 2
+  Um terço dos arquivos foram editados por apenas um engenheiro, e outro quarto por dois.
+  Apenas 10% dos arquivos são lidados por mais de sete engenheiros. Isso ocorre por dois
+  motivos: 
+  - No Facebook, engenheiros conduzem qualquer tipo de testes de unidade para o seu
+    código. Em adição, o código tem que passar em todos os testes acumulados de regressão,
+    administrados automaticamente como parte do processo de commit e push.
+  - Desenvolvedores também têm que dar suporte ao uso operacional do seu software — uma
+    combinação que ficou conhecida como “devops.” As metodologias e ferramentas não são
+    suficientes por si mesmas porque elas podem ser sempre usadas
+    erroneamente. Conseguintemente, uma cultura de responsabilidade pessoal é crítica.
+
+* Questão 3
+  O desenvolvimento de software no Facebook é contrário a muitas práticas comuns da
+  indústria. Os motivos são diversos, dentre eles:
+  - Não há um plano detalhado para atingir um produto final, bem especificado.
+  - Engenheiros trabalham diretamente com uma base de código sem branches e sem merging.
+  - Não há um time separado de QA para testes.
+  - Código novo é liberado em alto ritmo, atualmente duas vezes por dia.
+  - Engenheiros têm que escolher por si em que vão trabalhar.
+  - Não há punição por falhas.
+
+* Questão 4
+  - Post de dúvidas: o fórum, serve, primeiramente, para a postagem de dúvidas a serem
+    respondidas por usuários, com comentários e avaliação para as melhores respostas. No
+    fim, o autor da pergunta escolha a resposta que mais se adequou à pergunta.
+  - Respostas: o fórum também serve para pessoas com alto conhecimento em uma ou mais
+    áreas acumularem pontos com respostas e comentários. Esses pontos podem usados para
+    futuras contratações, satisfação pessoal ou puramente altruísmo.
+  - Pesquisa: o fórum também serve para usuários pesquisarem por perguntas já respondidas
+    previamente. Com o passar dos anos, apenas perguntas muito específicas, ou de
+    ferramentas novas, serão novidade.
+  - Aprendizado de Máquina: fóruns de Q&A podem ser usados em competições de machine
+    learning para a tentativa de previsão de tags automáticas para as perguntas.    
+  - Estudos de confiabilidade: muitos exemplos de código de fóruns online de Q&A podem não
+    ser confiáveis. Esse fato pode ser usado em estudos empíricos para uma análise de mal
+    uso de API.
+
+* Questão 5
+  Eu tentaria convencê-lo, pois de fato o usuário não conseguiria utilizar essa
+  funcionalidade sem ter aberto o arquivo primeiro.

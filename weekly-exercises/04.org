@@ -1,0 +1,59 @@
+# -*- after-save-hook: org-latex-export-to-pdf; -*-
+#+options: date:nil
+#+language: bt-br
+#+latex_header: \usepackage[a4paper, margin=2cm]{geometry}
+#+latex_header: \usepackage{indentfirst}
+#+latex_header: \usepackage[]{babel}
+#+latex_header: \usepackage{float}
+#+latex_header: \usepackage{color, colortbl}
+#+latex_header: \usepackage{titling}
+#+latex_header: \setlength{\droptitle}{-1.5cm}
+#+latex_header: \hypersetup{ colorlinks = true, urlcolor = blue }
+#+latex_header: \usemintedstyle{murphy}
+#+latex_header: \definecolor{beige}{rgb}{0.93,0.93,0.82}
+#+latex_header: \definecolor{brown}{rgb}{0.4,0.2,0.0}
+
+
+#+AUTHOR: Fernanda Guimarães - 2016058166
+#+TITLE: Exercício 04 - (entrega 01/04)
+
+* Q1
+  O Sprint pode ser cancelado antes que o tempo do Sprint termine. Apenas o Product
+  Owner tem o autoridade para cancelar o Sprint, embora ele ou ela possa estar sob
+  influência do interessados, a Equipe de Desenvolvimento ou o Scrum Master.
+
+  O Sprint será cancelado se o objetivo do Sprint se tornar obsoleto. Isso pode ocorrer se o
+  a empresa muda de direção ou se as condições de mercado ou tecnologia mudarem. Em geral, o
+  Sprint deve ser cancelado se não fizer mais sentido, dadas as circunstâncias. Mas, devido
+  ao curto duração de Sprints, o cancelamento raramente faz sentido.
+
+* Q2
+  The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create
+  a plan for improvements to be enacted during the next Sprint.  The Sprint Retrospective
+  occurs after the Sprint Review and prior to the next Sprint Planning.
+
+* Q3
+  Self-organizing teams choose how best to accomplish their work, rather than being
+  directed by others outside the team. Cross-functional teams have all competencies needed
+  to accomplish the work without depending on others not part of the team.
+
+* Q4
+  Algumas práticas de Scrum estavam no caminho do progresso do Spotify. Assim, eles
+  fizeram essas práticas opcionais. Após isso, a metodologia ágil importava mais que o
+  Scrum e princípios importavam mais que práticas.
+
+* Q5
+  Sempre que houver uma interrupção significativa de qualquer um dos sistemas de produção,
+  ou um acidente semelhante, as pessoas envolvidas são obrigadas a escrever um documento
+  /post-mortem/. Este documento descreve o incidente, incluindo título, resumo, impacto,
+  linha do tempo, causa (s) raiz (es), o que funcionou / o que não funcionou e itens de
+  ação. O foco está nos problemas, e como evitá-los no futuro, não no pessoas ou
+  atribuindo culpa.
+
+* Q6
+  - Seu projeto não é muito urgente, muito complexo ou novo
+  - Sua equipe não é auto-organizada e não tem desenvolvedores profissionais
+  - Seu cliente requer documentação clara de cada ciclo de desenvolvimento
+  - Seu cliente requer aprovações em cada estágio de desenvolvimento
+  - Seu cliente quer que você use a metodologia tradicional e não deseja saber mais sobre o Agile
+  - Sua organização não investe na disseminação de práticas ágeis entre desenvolvedores, testadores e gerenciamento

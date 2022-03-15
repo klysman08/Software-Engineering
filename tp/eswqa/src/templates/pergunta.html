@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% set active_page = "pergunta" %}
+{% block content %}
+	<div class="card">
+	<div class="card-body" id="question">
+		<h2 class="card-title">{{ pergunta_title }}</h2>
+		<p class="card-text">{{ pergunta_desc }} </p>
+		<button class="btn btn-primary btn-icon btn-round" vote="1" id="question-upvote_{{ pergunta_id }}" question="{{ pergunta_id }}">
+			<i class="now-ui-icons arrows-1_minimal-up"></i>
+		</button>
+		<span id="question-votes_{{ pergunta_id }}">{{ pergunta_votes }}</span>
+		<button class="btn btn-primary btn-icon btn-round" vote="-1" id="question-downvote_{{ pergunta_id }}" question="{{ pergunta_id }}">
+			<i class="now-ui-icons arrows-1_minimal-down"></i>
+		</button>
+		<button class="btn btn-primary btn-outline-primary btn-round">
+				{{ pergunta_data }}
+		</button>
+		<button class="btn btn-primary btn-outline-primary btn-round">
+			{{ pergunta_fullname }}
+		</button>
+    {%for tag in pergunta_tag%}
+        <a href="/perguntas-por-tag/{{ tag }}">
+         	 <button class="btn btn-primary btn-outline-primary btn-round">{{ tag }}</button>
+        </a>
+    {% endfor %}
+		<span id="question-msg_{{ pergunta_id }}"></span>
+	</div>
+	</div>
+
+	{% if session['logged_user_id'] %}
+    <form class="form" method="POST">
+		  <div class="card">
+        <div class="card-body">
+          <blockquote class="blockquote blockquote-primary mb-0">
+						<textarea name="resposta" class="form-control" placeholder="Digite sua resposta aqui"></textarea>
+            <input type="submit" name="download" value="Responder" class="btn btn-primary btn-round">
+          </blockquote>
+		    </div>
+		  </div>
+    </form>
+		{% else %}
+		<div class="card">
+			<div class="card-body">
+				<blockquote class="blockquote blockquote-primary mb-0">
+					<a href="/login"><button class="btn btn-link btn-primary ">Clique aqui para fazer login e responder</button></a>
+				</blockquote>
+			</div>
+		</div>
+
+    {% endif %}
+
+    {% for resp in respostas %}
+		<div class="card">
+		<div class="card-body" id="answer">
+			<!--blockquote class="blockquote blockquote-primary mb-0"-->
+				<p class="card-text">{{ resp.description }}</p>
+				<button class="btn btn-primary btn-icon btn-round" question="{{pergunta_id}}" answer="{{resp.idanswer}}" vote="1" id="answer-upvote_{{resp.idanswer}}" >
+				  <i class="now-ui-icons arrows-1_minimal-up"></i>
+				</button>
+				<span id="answer-votes_{{resp.idanswer}}">{{ resp.rating }}</span>
+				<button class="btn btn-primary btn-icon btn-round" question="{{pergunta_id}}" answer="{{resp.idanswer}}" vote="-1" id="answer-downvote_{{resp.idanswer}}">
+				  <i class="now-ui-icons arrows-1_minimal-down"></i>
+				</button>
+				<button class="btn btn-primary btn-outline-primary btn-round">
+					{{ resp.data }}
+				</button>
+				<button class="btn btn-primary btn-outline-primary btn-round">
+					{{ resp.user_fullname }}
+				</button>
+				<span id="answer-msg_{{resp.idanswer}}"></span>
+			<!--/blockquote-->
+		</div>
+		</div>
+    {% endfor %}
+{% endblock %}
