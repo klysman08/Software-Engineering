@@ -22,8 +22,7 @@ def login_popup():
 def pergunta(pergunta_id):
     if request.method == 'POST':
         answer = Answer.Answer()
-        pass
-        # return str(answer._insert(pergunta_id, "1", request.form['resposta']))
+            # return str(answer._insert(pergunta_id, "1", request.form['resposta']))
     else:
         answer = Answer.Answer()
         respostas = answer._select_all_by_questionid(str(pergunta_id))
@@ -32,11 +31,10 @@ def pergunta(pergunta_id):
 
 @app.route("/cadastro", methods=['GET', 'POST'])
 def cadastro():
-    if request.method == 'POST':
-        user = User.User()
-        return str(user.validate_register(request.form['fullname'], request.form['email'], request.form['password']))
-    else:
+    if request.method != 'POST':
         return render_template('cadastro.html')
+    user = User.User()
+    return str(user.validate_register(request.form['fullname'], request.form['email'], request.form['password']))
 
 @app.route("/fazer-pergunta", methods=['GET', 'POST'])
 def fazer_pergunta():
@@ -48,15 +46,15 @@ def fazer_pergunta():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        user = User.User()
-        if user.validate_login(request.form['email'], request.form['password']):
-            session['logged_user_email'] = request.form['email']
-            return "Logado com sucesso!"
-        else:
-            return redirect(url_for('login_popup'))
-    else:
+    if request.method != 'POST':
         return render_template('login.html')
+    user = User.User()
+    if not user.validate_login(
+        request.form['email'], request.form['password']
+    ):
+        return redirect(url_for('login_popup'))
+    session['logged_user_email'] = request.form['email']
+    return "Logado com sucesso!"
 
 @app.route("/sair")
 def sair():

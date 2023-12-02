@@ -6,8 +6,8 @@ import classes.utils as Utils
 
 class Test(TestCase):
     @classmethod
-    def setUpClass(self):
-        self.ut = Utils.Utils()
+    def setUpClass(cls):
+        cls.ut = Utils.Utils()
 
     def test_md5(self):
         md5 = self.ut.md5("12345")
