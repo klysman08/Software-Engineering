@@ -7,8 +7,8 @@ from classes.database import Database as Database
 
 class Test(TestCase):
     @classmethod
-    def setUpClass(self):
-        self.us = User()
+    def setUpClass(cls):
+        cls.us = User()
 
     #escolhe as funcoes para simular (é possível simular várias funcoes)
     @patch.object(Database, 'query')

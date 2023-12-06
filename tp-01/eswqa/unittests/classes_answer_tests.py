@@ -8,9 +8,9 @@ from classes.utils import Utils
 
 class Test(TestCase):
     @classmethod
-    def setUpClass(self):
-        self.an = Answer()
-        self.utils = Utils()
+    def setUpClass(cls):
+        cls.an = Answer()
+        cls.utils = Utils()
 
     @patch.object(Answer, '_delete')
     def test_remove(self, mock__delete):

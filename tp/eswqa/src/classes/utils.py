@@ -3,13 +3,10 @@ from flask import session
 
 class Utils:
     def md5(self, string):
-        return str(hashlib.md5(string.encode('utf-8')).hexdigest())
+        return hashlib.md5(string.encode('utf-8')).hexdigest()
 
     def validate_not_empty(self, array):
-        for item in array:
-            if item == '' or item == None :
-                return False
-        return True
+        return not any(item == '' or item is None for item in array)
 
     def get_alert(self):
         try:

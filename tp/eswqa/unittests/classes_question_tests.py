@@ -9,8 +9,8 @@ from classes.utils import Utils
 
 class Test(TestCase):
     @classmethod
-    def setUpClass(self):
-        self.qt = Question()
+    def setUpClass(cls):
+        cls.qt = Question()
 
     @patch.object(Question, '_edit')
     @patch.object(Question, '_insert')
